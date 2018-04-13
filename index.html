@@ -60,6 +60,8 @@
 	        
 				<li><a href="http://wwww.zhangmeng.ml">demos</a></li>
 	        
+				<li><a href="/about">关于</a></li>
+	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
@@ -126,6 +128,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -152,11 +156,13 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
+					<li style="width: 25%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/categories">目录</a></li>
+					<li style="width: 25%"><a href="/categories">目录</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="http://wwww.zhangmeng.ml">demos</a></li>
+					<li style="width: 25%"><a href="http://wwww.zhangmeng.ml">demos</a></li>
+		        
+					<li style="width: 25%"><a href="/about">关于</a></li>
 		        
 				</ul>
 			</nav>
@@ -172,6 +178,252 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-搭建服务器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/13/搭建服务器/">搭建服务器 - 在实践中总结</a>
+    </h1>
+  
+
+        
+        <a href="/2018/04/13/搭建服务器/" class="archive-article-date">
+  	<time datetime="2018-04-13T06:26:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="起源"><a href="#起源" class="headerlink" title="起源"></a>起源</h2><p>阿里云送了6个月的服务器试用，需要学习一下如何搭建服务器，   </p>
+<ul>
+<li>安装tomcat服务器</li>
+<li>安装jenkins实现持续集成的功能，</li>
+<li>安装nginx以及其简单配置</li>
+</ul>
+<h4 id="安装tomcat和java8"><a href="#安装tomcat和java8" class="headerlink" title="安装tomcat和java8"></a>安装tomcat和java8</h4><p>阿帕奇官网 <a href="https://tomcat.apache.org/download-70.cgi" target="_blank" rel="noopener">https://tomcat.apache.org/download-70.cgi</a> 下载tomcat最新版本（7.0.85）并解压到喜欢的位置</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/13/搭建服务器/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-wget使用教程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/10/wget使用教程/">wget使用教程</a>
+    </h1>
+  
+
+        
+        <a href="/2018/04/10/wget使用教程/" class="archive-article-date">
+  	<time datetime="2018-04-10T10:34:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="起源"><a href="#起源" class="headerlink" title="起源"></a>起源</h2><blockquote>
+<p>wget是一个命令工具，通过执行wget 命令用来从指定的url下载文件。它的优点是稳定，支持断点下载，脱离下载工具的限制。<br>安装和使用wget需要先执行前面的环境的配置</p>
+</blockquote>
+<h4 id="一，安装ruby"><a href="#一，安装ruby" class="headerlink" title="一，安装ruby"></a>一，安装ruby</h4><blockquote>
+<p>mac 自带 ruby</p>
+</blockquote>
+<h4 id="二，利用-ruby-安装-brew"><a href="#二，利用-ruby-安装-brew" class="headerlink" title="二，利用 ruby 安装 brew"></a>二，利用 ruby 安装 brew</h4><blockquote>
+<p>如果已经安装ruby直接进入下一步<br>brew 全称Homebrew  是Mac OSX上的软件包管理工具<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ /usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</span><br></pre></td></tr></table></figure></p>
+<p>brew 中文官网：<a href="https://brew.sh/index_zh-cn.html" target="_blank" rel="noopener">https://brew.sh/index_zh-cn.html</a></p>
+<p>在安装了brew之后就能通过brew来安装各种有用的插件包</p>
+</blockquote>
+<p>为什么要使用Homebrew</p>
+<blockquote>
+<ul>
+<li>Mac OS X是基于Unix的，它可以使用非常多Linux平台上开源的优秀工具，比如wget，比如dos2unix脚本工具等。</li>
+<li>但是OS X系统本身却缺少Linux下得包管理器。比如Fedora的yum与dnf，比如Ubuntu的apt-get，比如ArchLinux的Pacman等。</li>
+<li>于是这些优秀的开源软件在Mac上的安装只能通过下载源码，编译，安装，配置环境变量的步骤来完成安装。对于大部分的软件，在安装过程中是需要很多的依赖库的，手动去解决这些依赖库是十分痛苦的事情。包管理器干的就是这样的事情：解决软件安装过程中的依赖关系。</li>
+<li>有一个开源的项目叫Homebrew，完美解决了Mac OS X上没有包管理器的尴尬。</li>
+<li>brew的包管理是基于git的</li>
+</ul>
+</blockquote>
+<h4 id="三，使用brew安装wget"><a href="#三，使用brew安装wget" class="headerlink" title="三，使用brew安装wget"></a>三，使用brew安装wget</h4><p>科普brew的基本命令：<br>1，安装软件<br>brew安装软件的命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ brew install &lt;软件包名&gt;    </span><br><span class="line">// brew install wget 就可以安装wget</span><br></pre></td></tr></table></figure></p>
+<p>2，搜索软件<br>brew搜索软件的命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ brew search &lt;软件包名&gt;     </span><br><span class="line">// brew search wget 就可以搜索包管理器，列出所有相关的软件包，</span><br></pre></td></tr></table></figure></p>
+<p>3，查看软件信息<br>brew 查看信息的命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ brew info &lt;软件包名&gt;   </span><br><span class="line">如：brew Info wget 可以查看软件 wget的信息</span><br></pre></td></tr></table></figure></p>
+<p>4，卸载软件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uninstall</span><br></pre></td></tr></table></figure></p>
+<h4 id="四，wget命令"><a href="#四，wget命令" class="headerlink" title="四，wget命令"></a>四，wget命令</h4><p>参考链接： <a href="http://man.linuxde.net/wget" target="_blank" rel="noopener">http://man.linuxde.net/wget</a><br>wget 命令用来从指定的url下载文件。稳定，支持断点下载。<br>wget &lt;选项:可选&gt; &lt;参数&gt;<br>基本用法：</p>
+<ul>
+<li>wget &lt;文件的URL地址&gt;<blockquote>
+<p>将地址指向的文件下载到终端打开的位置<br>  如：wget <a href="http://i3.mifile.cn/a4/pms_1478510064.36397738.jpg" target="_blank" rel="noopener">http://i3.mifile.cn/a4/pms_1478510064.36397738.jpg</a></p>
+</blockquote>
+</li>
+<li>wget -i &lt;文件路径/文件名&gt;    <blockquote>
+<p>从指定文件获取要下载的url可以有多个url进行批量下载<br>  如： wget -i miimg.txt</p>
+</blockquote>
+</li>
+<li>wget -nc <url>             <blockquote>
+<p>文件存在时不覆盖原有文件</p>
+</blockquote>
+</url></li>
+</ul>
+<h4 id="五，试验"><a href="#五，试验" class="headerlink" title="五，试验"></a>五，试验</h4><p>下面就随便找一个网站试验，这里拿小米商城为例：<br>1，进入小米商城官网：右键-&gt;存储为  把网页源码保存到本地<br>2，打开html文件（这里使用sublime）<br>3，command + f 搜索，使用正则表达式搜索功能 -&gt; find all 搜索所有匹配的结果<br>搜：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img[\s]+src[\s]*=[\s]*(([&apos;&quot;](?&lt;src&gt;[^&apos;&quot;]*)[\&apos;&quot;])|(?&lt;src&gt;[^\s]*))</span><br></pre></td></tr></table></figure></p>
+<p>用来匹配img标签中的url<br>4，command + c 复制所有搜索的结果 command + n 新建一个文本文件，把复制的链接粘贴进去    </p>
+<p>5， 再搜索一次：把<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;./小米商城 - 小米6、红米Note 5A、小米5X、小米笔记本官方网站_files/</span><br><span class="line">替换为</span><br><span class="line">http://i3.mifile.cn/a4/ </span><br><span class="line">保存</span><br></pre></td></tr></table></figure></p>
+<p>6，打开终端 执行 wget -i <url文件路径名> 既可以把文件中合法的url链接下载到打开终端的当前目录，不正确的url会被忽略</url文件路径名></p>
+<p>7，另外一种正则：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(http:)?//[\w./-]*</span><br></pre></td></tr></table></figure></p>
+<p>匹配所有的<a href="http://开头的链接" target="_blank" rel="noopener">http://开头的链接</a> 同样不可下载的文件或者不正确的URL链接不会被下载</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/10/wget使用教程/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-bower包管理器的使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/10/bower包管理器的使用/">bower包管理器的使用命令</a>
+    </h1>
+  
+
+        
+        <a href="/2018/04/10/bower包管理器的使用/" class="archive-article-date">
+  	<time datetime="2018-04-10T10:25:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1，自定义包安装目录"><a href="#1，自定义包安装目录" class="headerlink" title="1，自定义包安装目录"></a>1，自定义包安装目录</h4><p>新建名为  .bowerrc的文件，指定包安装路径<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;directory&quot;:&quot;app/lib&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="2，bower-init-自动生成bower-json文件"><a href="#2，bower-init-自动生成bower-json文件" class="headerlink" title="2，bower init  自动生成bower.json文件"></a>2，bower init  自动生成bower.json文件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ bower init</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;bb_boot&quot;,</span><br><span class="line">  &quot;version&quot;: &quot;0.0.1&quot;,</span><br><span class="line">  &quot;authors&quot;: &quot;&quot;,</span><br><span class="line">  &quot;moduleType&quot;: [</span><br><span class="line">    &quot;amd&quot;</span><br><span class="line">  ],</span><br><span class="line">  &quot;license&quot;: &quot;MIT&quot;,</span><br><span class="line">  &quot;ignore&quot;: [</span><br><span class="line">    &quot;**/.*&quot;,</span><br><span class="line">    &quot;node_modules&quot;,</span><br><span class="line">    &quot;bower_components&quot;,</span><br><span class="line">    &quot;js/lib&quot;,</span><br><span class="line">    &quot;test&quot;,</span><br><span class="line">    &quot;tests&quot;</span><br><span class="line">  ],</span><br><span class="line">  &quot;dependencies&quot;: &#123;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="3，包的安装"><a href="#3，包的安装" class="headerlink" title="3，包的安装"></a>3，包的安装</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ bower install jquery --save			// save 保存配置到bower.json中</span><br></pre></td></tr></table></figure>
+<h4 id="4，包的信息"><a href="#4，包的信息" class="headerlink" title="4，包的信息"></a>4，包的信息</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ bower info jquery</span><br></pre></td></tr></table></figure>
+<h4 id="5，更新包版本（更新和下载）"><a href="#5，更新包版本（更新和下载）" class="headerlink" title="5，更新包版本（更新和下载）"></a>5，更新包版本（更新和下载）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ bower update</span><br></pre></td></tr></table></figure>
+<h4 id="6，包的查找-（查找关于jquery的包）"><a href="#6，包的查找-（查找关于jquery的包）" class="headerlink" title="6，包的查找 （查找关于jquery的包）"></a>6，包的查找 （查找关于jquery的包）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ bower search jquery</span><br></pre></td></tr></table></figure>
+<h4 id="7，包的卸载"><a href="#7，包的卸载" class="headerlink" title="7，包的卸载"></a>7，包的卸载</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ bower uninstall jquery</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/10/bower包管理器的使用/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-使用hexo-github搭建自己的博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
