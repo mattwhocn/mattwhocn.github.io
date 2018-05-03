@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018 | 张猛的博客</title>
+  <title>mac下profile文件的配置 | 张猛的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="张猛的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2018/index.html">
+  <meta name="description" content="mac下环境变量/etc/profile、/etc/bashrc、~/.bashrc的区别 需要给terminal中显示的git分支显示彩色区分，百度了一下如何配置,结果 不同的文章讲解的配置的方法不太一样，发现有些是在123#### ①/etc/profile: &amp;gt; 该文件登录操作系统时，为每个用户设置环境信息，当用户第一次登录时,该文件被执行。也就是说这个文件对每个shell都有效，用于">
+<meta name="keywords" content="mac">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mac下profile文件的配置">
+<meta property="og:url" content="http://yoursite.com/2018/05/02/mac下profile文件的配置/index.html">
 <meta property="og:site_name" content="张猛的博客">
+<meta property="og:description" content="mac下环境变量/etc/profile、/etc/bashrc、~/.bashrc的区别 需要给terminal中显示的git分支显示彩色区分，百度了一下如何配置,结果 不同的文章讲解的配置的方法不太一样，发现有些是在123#### ①/etc/profile: &amp;gt; 该文件登录操作系统时，为每个用户设置环境信息，当用户第一次登录时,该文件被执行。也就是说这个文件对每个shell都有效，用于">
+<meta property="og:updated_time" content="2018-05-03T01:43:05.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="张猛的博客">
+<meta name="twitter:title" content="mac下profile文件的配置">
+<meta name="twitter:description" content="mac下环境变量/etc/profile、/etc/bashrc、~/.bashrc的区别 需要给terminal中显示的git分支显示彩色区分，百度了一下如何配置,结果 不同的文章讲解的配置的方法不太一样，发现有些是在123#### ①/etc/profile: &amp;gt; 该文件登录操作系统时，为每个用户设置环境信息，当用户第一次登录时,该文件被执行。也就是说这个文件对每个shell都有效，用于">
   
     <link rel="alternative" href="/atom.xml" title="张猛的博客" type="application/atom+xml">
   
@@ -177,36 +182,43 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-mac下profile文件的配置" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/02/mac下profile文件的配置/" class="archive-article-date">
-  	<time datetime="2018-05-02T10:30:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-02</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/02/mac下profile文件的配置/">mac下profile文件的配置</a>
+    <h1 class="article-title" itemprop="name">
+      mac下profile文件的配置
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/05/02/mac下profile文件的配置/" class="archive-article-date">
+  	<time datetime="2018-05-02T10:30:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="mac下环境变量-etc-profile、-etc-bashrc、-bashrc的区别"><a href="#mac下环境变量-etc-profile、-etc-bashrc、-bashrc的区别" class="headerlink" title="mac下环境变量/etc/profile、/etc/bashrc、~/.bashrc的区别"></a>mac下环境变量/etc/profile、/etc/bashrc、~/.bashrc的区别</h2><blockquote>
+<p>需要给terminal中显示的git分支显示彩色区分，百度了一下如何配置,结果 不同的文章讲解的配置的方法不太一样，发现有些是在<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### ①/etc/profile: </span><br><span class="line">&gt; 该文件登录操作系统时，为每个用户设置环境信息，当用户第一次登录时,该文件被执行。也就是说这个文件对每个shell都有效，用于获取系统的环境信息。</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h1 id="etc-profile"><a href="#etc-profile" class="headerlink" title="/etc/profile"></a>/etc/profile</h1><h1 id="System-wide-environment-and-startup-programs-for-login-setup"><a href="#System-wide-environment-and-startup-programs-for-login-setup" class="headerlink" title="System wide environment and startup programs, for login setup"></a>System wide environment and startup programs, for login setup</h1><h1 id="Functions-and-aliases-go-in-etc-bashrc"><a href="#Functions-and-aliases-go-in-etc-bashrc" class="headerlink" title="Functions and aliases go in /etc/bashrc"></a>Functions and aliases go in /etc/bashrc</h1><h1 id="It’s-NOT-a-good-idea-to-change-this-file-unless-you-know-what-you"><a href="#It’s-NOT-a-good-idea-to-change-this-file-unless-you-know-what-you" class="headerlink" title="It’s NOT a good idea to change this file unless you know what you"></a>It’s NOT a good idea to change this file unless you know what you</h1><h1 id="are-doing-It’s-much-better-to-create-a-custom-sh-shell-script-in"><a href="#are-doing-It’s-much-better-to-create-a-custom-sh-shell-script-in" class="headerlink" title="are doing. It’s much better to create a custom.sh shell script in"></a>are doing. It’s much better to create a custom.sh shell script in</h1><h1 id="etc-profile-d-to-make-custom-changes-to-your-environment-as-this"><a href="#etc-profile-d-to-make-custom-changes-to-your-environment-as-this" class="headerlink" title="/etc/profile.d/ to make custom changes to your environment, as this"></a>/etc/profile.d/ to make custom changes to your environment, as this</h1><h1 id="will-prevent-the-need-for-merging-in-future-updates"><a href="#will-prevent-the-need-for-merging-in-future-updates" class="headerlink" title="will prevent the need for merging in future updates."></a>will prevent the need for merging in future updates.</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### ②/etc/bashrc： </span><br><span class="line">&gt; 为每一个运行bash shell的用户执行此文件，当bash shell被打开时,该文件被读取。也就是说，当用户shell执行了bash时，运行这个文件。</span><br></pre></td></tr></table></figure>
+<h1 id="etc-bashrc"><a href="#etc-bashrc" class="headerlink" title="/etc/bashrc"></a>/etc/bashrc</h1><h1 id="System-wide-functions-and-aliases"><a href="#System-wide-functions-and-aliases" class="headerlink" title="System wide functions and aliases"></a>System wide functions and aliases</h1><h1 id="Environment-stuff-goes-in-etc-profile"><a href="#Environment-stuff-goes-in-etc-profile" class="headerlink" title="Environment stuff goes in /etc/profile"></a>Environment stuff goes in /etc/profile</h1><h1 id="It’s-NOT-a-good-idea-to-change-this-file-unless-you-know-what-you-1"><a href="#It’s-NOT-a-good-idea-to-change-this-file-unless-you-know-what-you-1" class="headerlink" title="It’s NOT a good idea to change this file unless you know what you"></a>It’s NOT a good idea to change this file unless you know what you</h1><h1 id="are-doing-It’s-much-better-to-create-a-custom-sh-shell-script-in-1"><a href="#are-doing-It’s-much-better-to-create-a-custom-sh-shell-script-in-1" class="headerlink" title="are doing. It’s much better to create a custom.sh shell script in"></a>are doing. It’s much better to create a custom.sh shell script in</h1><h1 id="etc-profile-d-to-make-custom-changes-to-your-environment-as-this-1"><a href="#etc-profile-d-to-make-custom-changes-to-your-environment-as-this-1" class="headerlink" title="/etc/profile.d/ to make custom changes to your environment, as this"></a>/etc/profile.d/ to make custom changes to your environment, as this</h1><h1 id="will-prevent-the-need-for-merging-in-future-updates-1"><a href="#will-prevent-the-need-for-merging-in-future-updates-1" class="headerlink" title="will prevent the need for merging in future updates."></a>will prevent the need for merging in future updates.</h1><p>```</p>
+<h4 id="③-bashrc"><a href="#③-bashrc" class="headerlink" title="③~/.bashrc"></a>③~/.bashrc</h4><blockquote>
+<p>该文件存储的是专属于个人bash shell的信息，当登录时以及每次打开一个新的shell时,执行这个文件。在这个文件里可以自定义用户专属的个人信息。</p>
+</blockquote>
+<p>那么在用户登录系统时候，相关的文件执行顺序是什么呢。<br>在刚登录Linux时，首先启动 /etc/profile 文件，然后再启动用户目录下的 ~/.bash_profile、 ~/.bash_login或 ~/.profile文件中的其中一个，执行的顺序为：~/.bash_profile、 ~/.bash_login、 ~/.profile。如果 ~/.bash_profile文件存在的话，一般还会执行 ~/.bashrc文件。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -218,230 +230,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/05/02/mac下profile文件的配置/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/28/oh-my-zsh/" class="archive-article-date">
-  	<time datetime="2018-04-28T07:21:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-28</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/04/28/oh-my-zsh/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">oh my zsh</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/28/oh-my-zsh/">oh my zsh</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">tool zsh terminal1</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/25/js页面重定向的方法梳理/" class="archive-article-date">
-  	<time datetime="2018-04-25T06:54:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/25/js页面重定向的方法梳理/">js页面重定向的方法梳理</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/13/搭建服务器/" class="archive-article-date">
-  	<time datetime="2018-04-13T06:26:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/13/搭建服务器/">搭建服务器 - 在实践中总结</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/10/wget使用教程/" class="archive-article-date">
-  	<time datetime="2018-04-10T10:34:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/10/wget使用教程/">wget使用教程</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/10/bower包管理器的使用/" class="archive-article-date">
-  	<time datetime="2018-04-10T10:25:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/10/bower包管理器的使用/">bower包管理器的使用命令</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/24/使用hexo-github搭建自己的博客/" class="archive-article-date">
-  	<time datetime="2018-01-24T06:10:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/24/使用hexo-github搭建自己的博客/">使用hexo + github搭建自己的博客</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/24/hello-world/" class="archive-article-date">
-  	<time datetime="2018-01-24T05:47:48.987Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/24/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -464,8 +352,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
